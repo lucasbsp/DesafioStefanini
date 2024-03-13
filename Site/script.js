@@ -1,5 +1,3 @@
-import config from 'src/config';
-
 new Vue({
     el: "#app",
     data: {
@@ -11,12 +9,9 @@ new Vue({
             { title: "Título 2", desc: "Descrição 2", status: false },
             { title: "Título 3", desc: "Descrição 3", status: true }
         ],
-        apiUri: config.apiUrl
+        apiUrl: 'http://localhost:5000/api' // Substitua pelo endereço base da sua API
     },
     methods: {
-        showConfig(){
-            alert(this.apiUri);
-        },
         toggleTodo(todo) {
             let msg = "Mudar o status da tarefa para ";
             if (todo.status){

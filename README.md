@@ -6,7 +6,7 @@ Desenvolver um sistema de gerenciamento de tarefas (To-Do List) que permita ao u
 O desafio pode ser dividido em duas partes principais: desenvolvimento de uma API RESTful utilizando .NET 7 com persistência de dados em MongoDB, um banco de dados NoSQL, e o desenvolvimento de uma aplicação cliente usando Vue.js.
 
 
-# Quick Start
+# Introdução
 
 
 ## Pré-requisitos
@@ -15,7 +15,7 @@ O desafio pode ser dividido em duas partes principais: desenvolvimento de uma AP
 ### MongoDB
 
 
-Para reprodução deste projeto, é necessário que o usuário possua o  **MongoDB 7+** instalado e seu servidor esteja em execução. A versão Community pode ser baixado pelo link `https://www.mongodb.com/try/download/community`.
+Para reprodução deste projeto, é necessário que o usuário possua o  **MongoDB 7+** instalado e seu servidor esteja em execução. A versão Community pode ser baixada pelo link `https://www.mongodb.com/try/download/community`.
 
 >**Observação**: O caminho padrão para a execução do servidor MongoDB 7.0 é o seguinte: C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe
 
@@ -29,7 +29,18 @@ Para executar a API, baixe a pasta WebAPI, navegue até a pasta `DesafioStenanin
 
 >dotnet run
 
-Anote o endereço localhost e a porta em execução.
+Anote o endereço localhost e a porta em execução, e substitua no arquivo **script.js** que encontra-se em `Site/script.js`:
+>Linha 12 :: apiUrl
+
+
+## Limitações do Projeto
+
+
+A API realiza todas as funções básicas (criar, ler, atualizar e excluir) no banco de dados, assim como o site realiza todas as funções básicas em dados locais.
+
+> **Atenção:**<br>
+Por uma questão de tempo hábil no desenvolvimento deste projeto, o site não está integrado com a API, embora cada um funcione corretamente de forma separada.
+
 
 # API RESTful
 
@@ -42,6 +53,8 @@ Anote o endereço localhost e a porta em execução.
 
 ## Endpoint :: Item (tarefas)
 
+
+> **Obsevação:** As tarefas foram chamadas de `Item` porque o código-fonte foi escrito em inglês, e sua tradução seria `Task`, o que é uma palavra reservada no .NET.
 
 | Método | Caminho        | Descrição
 |--------|----------------|----------
