@@ -1,7 +1,6 @@
 ﻿using MongoDB.Driver;
 using DesafioStefanini.Models;
 using Microsoft.Extensions.Options;
-using ZstdSharp.Unsafe;
 
 namespace DesafioStefanini.Services
 {

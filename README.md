@@ -10,7 +10,7 @@ O desafio pode ser dividido em duas partes principais: desenvolvimento de uma AP
 
 
 É possível criar dois objetos, **Itens** e **Categorias**.
-Os `itens são as tarefas` em si. As categorias são formas de organizar as tarefas em grupos maiores. As categorias foram criadas para satisfazer a seguinte demanda do desafio:
+`Os itens são as tarefas em si`. As categorias são formas de organizar as tarefas em grupos maiores. As categorias foram criadas para satisfazer a seguinte demanda do desafio:
 
 > Adicionar uma funcionalidade que utilize um serviço de IA para sugerir a categorização das tarefas baseada em sua descrição.
 
@@ -70,7 +70,7 @@ Segue abaixo um exemplo de schema do objeto **Category** utilizado pelos método
 
 # Banco de Dados MongoDB
 
-A conexão com o banco de dados, assim como o nome das collections utilizadas, estão configuradas no arquivo `appsettings.json`, localizado na raiz do projeto.
+A conexão com o banco de dados, assim como o nome das collections utilizadas, estão configuradas no arquivo `appsettings.json`, localizado na raiz do projeto WebAPI`.
 
 Foi utilizada a connection string padrão do MongoDB: **mongodb://localhost:27017/**
 
