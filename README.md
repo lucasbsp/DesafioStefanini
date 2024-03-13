@@ -12,12 +12,24 @@ O desafio pode ser dividido em duas partes principais: desenvolvimento de uma AP
 ## Pré-requisitos
 
 
+### MongoDB
+
+
 Para reprodução deste projeto, é necessário que o usuário possua o  **MongoDB 7+** instalado e seu servidor esteja em execução. A versão Community pode ser baixado pelo link `https://www.mongodb.com/try/download/community`.
 
 >**Observação**: O caminho padrão para a execução do servidor MongoDB 7.0 é o seguinte: C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe
 
 A documentação para a instalação do MongoDB pode ser encontrada em: `https://www.mongodb.com/docs/manual/installation/`.
 
+
+### API
+
+
+Para executar a API, baixe a pasta WebAPI, navegue até a pasta `DesafioStenanini`, e execute a linha abaixo no terminal de comando:
+
+>dotnet run
+
+Anote o endereço localhost e a porta em execução.
 
 # API RESTful
 
