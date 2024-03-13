@@ -1,0 +1,62 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Stefanini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="app">
+        <header>
+            <h2>Desafio Técnico Stefanini - Lista de Tarefas_</h2>
+            <form>
+                <input type="text" v-model="todoTitle" placeholder="Título da tarefa...">
+                <input type="text" v-model="todoDesc" placeholder="Descrição da tarefa...">
+                <select id="options" v-model="todoStatus">
+                    <option value=false>Status Pendente</option>
+                    <option value=true>Status Concluído</option>
+                </select>
+                <button @click.prevent="addTodo"><img src="img/icons8-mais-32.png" alt="adicionar"></button>
+            </form>
+        </header>
+
+        <section>
+            <ol>
+                <li v-for="todo in filteredTodos" :key="todo.title">
+                    <div>
+                        <label>
+                            <del v-if="todo.status">
+                                {{ todo.title }}
+                            </del>
+                            <span v-else>
+                                {{ todo.title }}
+                            </span>
+                        </label>
+                        <br>
+                        <label v-if="todo.desc" class="desc">
+                            <span v-if="todo.status" class="desc-completed">
+                                {{ todo.desc }}
+                            </span>
+                            <span v-else>
+                                {{ todo.desc }}
+                            </span>
+                        </label>
+                    </div>
+                    <div>
+                        <img src="img/icons8-ok-32.png" @click="toggleTodo(todo)" alt="concluido" v-if="todo.status">
+                        <img src="img/icons8-pending-32.png" @click="toggleTodo(todo)" alt="pendente" v-else>
+                        <img src="img/icons8-editar-32.png" @click="editTodo(todo)" alt="editar">
+                        <img src="img/icons8-cancelar-32.png" @click="delTodo(todo)" alt="fechar">
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="todo.js"></script>
+
+</body>
+
+</html>
